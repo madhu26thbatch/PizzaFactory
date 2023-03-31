@@ -1,11 +1,11 @@
 package com.PizzaFactory;
 
-<*import java.util.ArrayList;
-import java.util.LinkedHashMap;*>
+/*import java.util.ArrayList;
+import java.util.LinkedHashMap;*/
 import java.util.Scanner;
 
 public class SelfPizzaOrder {
-	//first we need to take few variables with collection
+	//first we need to take few variables with collection and cost variables
 	static Scanner ss = new Scanner(System.in);
 	/*static LinkedHashMap<String, Integer> hm = new LinkedHashMap<String, Integer>();
 	static ArrayList<String> als = new ArrayList<String>(); */
@@ -17,6 +17,7 @@ public class SelfPizzaOrder {
 	static int cost=0;
 
 	public static void main(String[] args) {
+		//this is main method where the program starts
 		System.out.println("welcome to vikasietum Pizza Hut");
 		int flag = 1;
 		String type=null;
@@ -24,6 +25,8 @@ public class SelfPizzaOrder {
 		{
 		System.out.println("press 1:vegetarian pizza ,2:non-vegetarian pizza,3:side dishes,any number:exit");
 		int press = ss.nextInt();
+			//option to select what ever customer want 
+			// used switch case 
 		switch(press)
 		{
 		case 1: type="vegetarian pizza";
@@ -91,8 +94,10 @@ public class SelfPizzaOrder {
 		}
 		return sum;
 	}
+	
 
 	private static int nonVegetarian() {
+		// method for non-vegetarian customers
 			System.out.println("press 1:non-veg supreme, press 2: chicken tikka,"
 					+ " press 3:pepper barbeque chicken");
 			int press = ss.nextInt();
@@ -122,6 +127,7 @@ public class SelfPizzaOrder {
 		
 		
 	private static int selectTopings() {
+		// customer can choose what type of they want to order
 		System.out.println("press 1:only veg toppings, press 2:only non veg toppings , press 3:both, press 4:extra cheese");
 	       int press = ss.nextInt();
 	       int cost=0;
@@ -149,6 +155,7 @@ public class SelfPizzaOrder {
 
 		public static int vegetarian()
 		{
+			// this is only for vegetarian
 			System.out.println("press 1: deluxe veggie, press 2:cheese and corn, "
 					+ "press 3:paneer tikka");
 			int press = ss.nextInt();
@@ -187,6 +194,7 @@ public class SelfPizzaOrder {
 }
 		public static String typeOfCrust()
 		{
+			// this methos is used for showing the crust details 
 			System.out.println("press 1:new hand tossed, press 2: wheat thin crust"
 					+ "press 3: cheese burst, press 4: fresh pan pizza");
 			int press = ss.nextInt();
@@ -201,6 +209,7 @@ public class SelfPizzaOrder {
 		
 			
 		}
+	// next the order cost calculation 
 		public static int vegtoppings(String type)
 		{
 			int sum = 0;
